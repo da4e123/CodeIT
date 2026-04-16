@@ -1,0 +1,19 @@
+# Java / Spring Boot
+target/
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Node (frontend ако имаш)
+node_modules/
+dist/
+build/
+.env
