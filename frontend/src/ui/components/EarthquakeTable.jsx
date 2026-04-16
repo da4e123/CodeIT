@@ -13,16 +13,38 @@ const EarthquakeTable = () => {
     if (error) return <p>{error.message}</p>;
 
     return (
-        <div>
-            <div>
-                <h2>Earthquakes</h2>
-                <button onClick={refreshEarthquakes}>
-                    Refresh
-                </button>
-            </div>
-
-            <table border="1" cellPadding="8">
+        <div style={{ width: "100%" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse" }} border="1" cellPadding="8">
                 <thead>
+
+                <tr>
+                    <th colSpan="4" style={{
+                        textAlign: "center",
+                        fontSize: "25px",
+                        padding: "12px",
+                        fontWeight: "bold",
+                        color: "white"
+                    }}>
+                        Earthquakes
+                    </th>
+
+                    <th style={{ textAlign: "right", padding: "12px" }}>
+                        <button
+                            onClick={refreshEarthquakes}
+                            style={{
+                                backgroundColor: "#007bff",
+                                color: "white",
+                                border: "none",
+                                padding: "8px 12px",
+                                borderRadius: "6px",
+                                cursor: "pointer"
+                            }}
+                        >
+                            Refresh
+                        </button>
+                    </th>
+                </tr>
+
                 <tr>
                     <th>Magnitude</th>
                     <th>Place</th>
@@ -42,7 +64,14 @@ const EarthquakeTable = () => {
                         <td>
                             <button
                                 onClick={() => onDelete(eq.id)}
-                                className="btn btn-danger"
+                                style={{
+                                    backgroundColor: "rgba(255,0,0,0.79)",
+                                    color: "white",
+                                    border: "none",
+                                    padding: "8px 12px",
+                                    borderRadius: "6px",
+                                    cursor: "pointer"
+                                }}
                             >
                                 Delete
                             </button>
